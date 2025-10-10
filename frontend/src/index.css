@@ -15,8 +15,8 @@ a {
 }
 
 .gradient-hero {
-  background: radial-gradient(100% 100% at 50% 0%, rgba(147, 197, 253, 0.45) 0%, rgba(255, 255, 255, 0) 60%),
-    linear-gradient(135deg, rgba(29, 78, 216, 0.12) 0%, rgba(15, 23, 42, 0.04) 45%, rgba(249, 115, 22, 0.2) 100%);
+  background: radial-gradient(110% 120% at 50% 0%, rgba(47, 61, 99, 0.22) 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(135deg, rgba(30, 39, 67, 0.18) 0%, rgba(20, 27, 46, 0.05) 45%, rgba(254, 97, 90, 0.28) 100%);
 }
 
 .card-surface {

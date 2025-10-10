@@ -8,10 +8,10 @@ export default {
       },
       colors: {
         brand: {
-          DEFAULT: '#1D4ED8',
-          dark: '#1E3A8A',
-          light: '#93C5FD',
-          accent: '#F97316'
+          DEFAULT: '#1E2743',
+          dark: '#141B2E',
+          light: '#2F3D63',
+          accent: '#FE615A'
         }
       },
       boxShadow: {

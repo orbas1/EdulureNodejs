@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Communities', to: '/feed' },
   { name: 'Courses', to: '/search?type=courses' },
   { name: 'Tutors', to: '/search?type=tutors' },
-  { name: 'Pricing', to: '/#pricing' }
+  { name: 'Pricing', to: '/#revenue-share' }
 ]
 
 const Header = () => {
@@ -18,8 +18,7 @@ const Header = () => {
     <header className="border-b border-slate-100 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 sticky top-0 z-30">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src="https://i.ibb.co/twQyCm1N/Edulure-Logo.png" alt="Edulure logo" className="h-10 w-auto" />
-          <span className="hidden text-lg font-semibold text-slate-900 sm:inline">Edulure</span>
+          <img src="https://i.ibb.co/twQyCm1N/Edulure-Logo.png" alt="Edulure" className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 lg:flex">
