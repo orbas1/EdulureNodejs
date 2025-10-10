@@ -27,7 +27,7 @@ const partnerLogos = ['Notion', 'Figma', 'Coursera', 'Slack', 'Zapier']
 const HomePage = () => {
   return (
     <div className="bg-white">
-      <section className="gradient-hero">
+      <section className="border-b border-slate-100 bg-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-24 lg:flex-row lg:items-center">
           <div className="flex-1 space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-brand">
@@ -74,18 +74,12 @@ const HomePage = () => {
             </dl>
           </div>
           <div className="flex flex-1 items-center justify-center">
-            <div className="card-surface relative w-full max-w-md overflow-hidden">
+            <div className="card-surface relative w-full max-w-xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80"
-                alt="Live class preview"
-                className="h-72 w-full object-cover"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80"
+                alt="Educators hosting an interactive live classroom"
+                className="h-[24rem] w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/0 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 space-y-3 p-6 text-white">
-                <p className="text-xs uppercase tracking-widest text-brand-light">Live Cohort in session</p>
-                <p className="text-lg font-semibold">Designing community-first digital campuses</p>
-                <p className="text-sm text-slate-200">1.2k members connected · 96% completion rate</p>
-              </div>
             </div>
           </div>
         </div>
