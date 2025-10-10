@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: only light;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+a {
+  @apply text-brand hover:text-brand-dark transition-colors;
+}
+
+.gradient-hero {
+  background: radial-gradient(110% 120% at 50% 0%, rgba(47, 61, 99, 0.22) 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(135deg, rgba(30, 39, 67, 0.18) 0%, rgba(20, 27, 46, 0.05) 45%, rgba(254, 97, 90, 0.28) 100%);
+}
+
+.card-surface {
+  @apply bg-white shadow-card rounded-3xl border border-slate-100;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight;
+}
