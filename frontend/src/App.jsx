@@ -8,6 +8,7 @@ import FeedPage from './pages/FeedPage'
 import ProfilePage from './pages/ProfilePage'
 import SearchPage from './pages/SearchPage'
 import AdminLoginPage from './pages/AdminLoginPage'
+import AdminAnalyticsPage from './pages/AdminAnalyticsPage'
 
 function App () {
   return (
@@ -21,6 +22,7 @@ function App () {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/admin/login" element={<AdminLoginPage />} />
+        <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
       </Route>
     </Routes>
   )

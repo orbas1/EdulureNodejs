@@ -1,4 +1,5 @@
 import { Community, Membership, Post, User } from '../models/index.js'
+import { invalidateAnalyticsCache } from './analyticsService.js'
 
 export async function listCommunities () {
   return Community.findAll({ order: [['createdAt', 'DESC']] })
@@ -9,10 +10,15 @@ export async function getCommunity (slug) {
 }
 
 export async function createCommunity (payload) {
-  return Community.create(payload)
+  const community = await Community.create(payload)
+  invalidateAnalyticsCache()
+  return community
 }
 
 export async function joinCommunity ({ communityId, userId }) {
-  const [membership] = await Membership.findOrCreate({ where: { communityId, userId }, defaults: { communityId, userId } })
+  const [membership, created] = await Membership.findOrCreate({ where: { communityId, userId }, defaults: { communityId, userId } })
+  if (created) {
+    invalidateAnalyticsCache()
+  }
   return membership
 }
