@@ -1,21 +1,21 @@
 import { Router } from 'express'
 import authenticate from '../middleware/authMiddleware.js'
+import { overview, warmCache } from '../controllers/adminAnalyticsController.js'
 
 const router = Router()
 
 router.use(authenticate)
-
-router.get('/overview', (req, res) => {
+router.use((req, res, next) => {
   if (req.user.role !== 'admin') {
     return res.status(403).json({ message: 'Forbidden' })
   }
-  res.json({
-    metrics: {
-      activeCommunities: 12,
-      instructorsPending: 4,
-      learnersThisWeek: 1842
-    }
-  })
+  next()
 })
+
+router.get('/analytics/overview', overview)
+router.post('/analytics/overview/warm', warmCache)
+
+// Backwards compatibility for previous clients hitting /overview
+router.get('/overview', overview)
 
 export default router

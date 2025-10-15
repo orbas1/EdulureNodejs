@@ -1,5 +1,6 @@
 import { validationResult } from 'express-validator'
 import { authenticateUser, enableTwoFactor, registerUser } from '../services/authService.js'
+import { invalidateAnalyticsCache } from '../services/analyticsService.js'
 
 export async function register (req, res, next) {
   try {
@@ -9,6 +10,7 @@ export async function register (req, res, next) {
     }
     const { email, password, role, profile } = req.body
     const user = await registerUser({ email, password, role, profile })
+    invalidateAnalyticsCache()
     res.status(201).json({ id: user.id, email: user.email, role: user.role })
   } catch (error) {
     next(error)

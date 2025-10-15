@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Communities', to: '/feed' },
   { name: 'Courses', to: '/search?type=courses' },
   { name: 'Tutors', to: '/search?type=tutors' },
+  { name: 'Analytics', to: '/admin/analytics', badge: 'NEW' },
   { name: 'Pricing', to: '/#revenue-share' }
 ]
 
@@ -30,7 +31,14 @@ const Header = () => {
                 `transition-colors hover:text-brand ${isActive || location.pathname === item.to ? 'text-brand font-semibold' : ''}`
               }
             >
-              {item.name}
+              <span className="flex items-center gap-2">
+                {item.name}
+                {item.badge && (
+                  <span className="inline-flex items-center rounded-full bg-sky-100 px-2 py-0.5 text-[10px] font-semibold uppercase text-sky-600">
+                    {item.badge}
+                  </span>
+                )}
+              </span>
             </NavLink>
           ))}
         </nav>
@@ -66,7 +74,14 @@ const Header = () => {
                         to={item.to}
                         className={`${active ? 'bg-slate-50 text-brand' : 'text-slate-700'} block rounded-xl px-4 py-2 text-sm font-medium`}
                       >
-                        {item.name}
+                        <span className="flex items-center gap-2">
+                          {item.name}
+                          {item.badge && (
+                            <span className="inline-flex items-center rounded-full bg-sky-100 px-2 py-0.5 text-[10px] font-semibold uppercase text-sky-600">
+                              {item.badge}
+                            </span>
+                          )}
+                        </span>
                       </Link>
                     )}
                   </Menu.Item>

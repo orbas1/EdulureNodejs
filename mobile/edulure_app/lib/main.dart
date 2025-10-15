@@ -7,6 +7,7 @@ import 'screens/register_screen.dart';
 import 'screens/feed_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/admin_login_screen.dart';
+import 'screens/admin_analytics_screen.dart';
 
 void main() {
   runApp(const EdulureApp());
@@ -46,6 +47,7 @@ class EdulureApp extends StatelessWidget {
         '/feed': (context) => const FeedScreen(),
         '/profile': (context) => const ProfileScreen(),
         '/admin/login': (context) => const AdminLoginScreen(),
+        '/admin/analytics': (context) => const AdminAnalyticsScreen(),
       },
     );
   }
